@@ -16,6 +16,8 @@ Estando na pasta raiz do projeto rode o comando abaixo para download das depend�
 
     yarn
     
-Por fim execute o comando yarn dev para que execute a API localmente na porta 3333.
+Por fim execute o comando abaixo para que execute a API localmente na porta 3333.
+
+  yarn dev
 
 Após isso estará disponível para consulta os end-points gerados por essa API.
