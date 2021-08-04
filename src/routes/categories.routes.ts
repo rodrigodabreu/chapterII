@@ -1,5 +1,5 @@
 import { response, Router } from 'express';
-import { CreateCategoryService } from '../services/CreateCategoriyService';
+import { CreateCategoryService } from '../services/CreateCategoryService';
 import { CategoriesRepository } from '../repositories/CategoriesRepository';
 
 const categoriesRoutes = Router();
