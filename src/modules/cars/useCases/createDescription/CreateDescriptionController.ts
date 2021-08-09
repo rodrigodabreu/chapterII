@@ -1,0 +1,3 @@
+class CreateDescriptionController {}
+
+export { CreateDescriptionController };
