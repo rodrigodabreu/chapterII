@@ -1,7 +1,7 @@
 import { response, Router } from 'express';
-import { CreateCategoryUseCase } from '../modules/cars/useCases/createCategory/CreateCategoryUseCase';
 import { CategoriesRepository } from '../modules/cars/repositories/CategoriesRepository';
 import { createCategoryController } from '../modules/cars/useCases/createCategory';
+import { listCategoriesController } from '../modules/cars/useCases/listCategories';
 
 const categoriesRoutes = Router();
 
@@ -12,8 +12,7 @@ categoriesRoutes.post('/', (request, response) => {
 });
 
 categoriesRoutes.get('/', (request, response) => {
-  const categories = categoriesRepository.findAll();
-  return response.json(categories);
+  return listCategoriesController.handle(request, response);
 });
 
 export { categoriesRoutes };

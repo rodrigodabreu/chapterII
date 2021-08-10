@@ -7,11 +7,22 @@ import {
 class CategoriesRepository implements ICategoriesRepository {
   private categories: Category[];
 
-  constructor() {
+  private static INSTANCE: CategoriesRepository;
+
+  private constructor() {
     this.categories = [];
   }
+
+  public static getInstance(): CategoriesRepository {
+    if (!CategoriesRepository.INSTANCE) {
+      CategoriesRepository.INSTANCE = new CategoriesRepository();
+    }
+
+    return CategoriesRepository.INSTANCE;
+  }
+
   list(): Category[] {
-    throw new Error('Method not implemented.');
+    return this.categories;
   }
 
   create({ description, name }: ICreateCategoryDTO): void {
